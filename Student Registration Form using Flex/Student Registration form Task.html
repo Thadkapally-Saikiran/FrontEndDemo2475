@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(212, 218, 216);">
+
+    <h2 style="text-align: center;">Student Registration Form</h2>
+
+    <div  style="display: flex;justify-content: center;">
+        <form style="display: flex;flex-direction: column;background-color: greenyellow;padding: 45px;border-radius: 20px;" action="./login success page.html" >
+            <div>
+                <label for="First Name">First Name</label> <br>
+                <input type="text" placeholder="Enter the firstname">
+            </div>
+            <div>
+                <label for="Last Name">Last Name</label> <br>
+                <input type="text" placeholder="Enter the Lastname">
+            </div>
+            <div>
+                <label for="Age">Age</label> <br>
+                <input type="number" placeholder="Enter the age">
+            </div>
+            <div>
+                <label for="Mobile Number">Mobile Number</label> <br>
+                <input type="tel" placeholder="Enter the Mobile Number" required maxlength="10">
+            </div>
+            <div>
+                Gender <br>
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                Interest course <br>
+                <input type="radio" id="python" name="Interest course">
+                <label for="python">Python</label>
+                <input type="radio" id="frontend" name="Interest course">
+                <label for="frontend">Frontend</label>
+                <input type="radio" id="backend" name="Interest course">
+                <label for="backend">Backend</label>
+            </div>
+            <div>
+                <label for="Btech/Degree">Btech/Degree</label> <br>
+                <input type="text" placeholder="Enter the Btech/Degree">
+            </div>
+            <div>
+                <label for="College name">College name</label> <br>
+                <input type="text" placeholder="Enter the College name">
+            </div>
+            <div>
+                <label for="Year">Year</label> <br>
+                <input type="date" placeholder="Enter the year">
+            </div>
+            <div>
+                <label for="Email">Email</label> <br>
+                <input type="email" placeholder="Enter the email">
+            </div>
+            <div>
+                <label for="Password">Password</label> <br>
+                <input type="password" placeholder="Enter the password">
+            </div>
+            <div>
+                <label for="Conform password">Conform password</label> <br>
+                <input type="password" placeholder="Enter the conform password">
+            </div>
+            <div  style="display: flex;justify-content: space-between;">
+                <input type="submit" value="Login">
+                <input type="reset">
+            </div>
+            
+        </form>
+    </div>
+    
+</body>
+</html>
