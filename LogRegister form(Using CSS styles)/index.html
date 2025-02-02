@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color: rgb(130,130,130);">
+    <!-- In style we have 'text-align' property it has values like center,left,right,etc.. to align content position-->
+    <h1 style="text-align: center;">Registration Page</h1>
+
+
+    <!-- 'div' is a parent element for 'form' tag-->
+    <!-- 'div' itself is a  block level element whereas its child elements form and div's are now inline-block elements -->
+    <!-- we no need to mention 'width' isnide form tag as form is now inline-block element  -->
+    <div style="display: flex;justify-content: center;">
+
+        <!-- flex-direction is a property for flex to display elements either in row or column. row is a default flex-direction-->
+        <!-- if we don't know exact value we use 'justify-content' else use 'gap' property-->
+        <!-- form itself is a block level element it is apply entire width-->
+        <!-- If we need gap between border and content we use 'padding' which applies gap around 4 sides -->
+        <!-- border-radius will curve the edges of the border(Here background-color)-->
+        <!--
+        NOTE: By default felx-direction is row
+        -->
+        <form style="display: flex;flex-direction: column;gap: 10px;background-color: rgb(226, 246, 9);padding: 45px;border-radius: 20px;">
+            <div style="display: flex; flex-direction:column; gap: 5px;">
+                <label for="fname">Fname</label>
+                <input type="text" id="fname" placeholder="Enter Your fname">
+            </div>
+            <div style="display: flex; flex-direction:column; gap: 5px;">
+                <label for="lname">Lname</label>
+                <input type="text" id="lname" placeholder="Enter Your lname">
+            </div>
+            <div style="display: flex; flex-direction:column; gap: 5px;">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Your email">
+            </div>
+            <div style="display: flex; flex-direction:column; gap: 5px;">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Your password">
+            </div>
+            <div style="display: flex; flex-direction:column; gap: 5px;">
+                <label for="Cpassword">Confirm Password</label>
+                <input type="password" id="Cpassword" placeholder="Confirm Your password">
+            </div>
+            <div style="display: flex;justify-content: space-between;">
+                <input type="submit" value="Login">
+                <input type="reset">
+            </div>
+        </form>
+
+    </div>
+    
+</body>
+</html>
