@@ -1,0 +1,47 @@
+.container {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.container > span {
+    background-color:aqua;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    animation: balayya 2s linear 1s infinite alternate;
+}
+
+.container > span:nth-child(1) {
+    animation-delay: 5s;
+}
+
+.container > span:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.container > span:nth-child(3) {
+    animation-delay: 5s;
+}
+
+.container > span:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.container > span:nth-child(5) {
+    animation-delay: 5s;
+}
+
+@keyframes balayya {
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(-100px);
+    }
+}
