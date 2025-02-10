@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+ul {
+    /* it used to remove  dots from unordered list */
+    list-style: none;
+}
+
+nav{
+    /*background-color: black; */
+    /* top, bottom -> 10px and left,right -> 20px */
+    padding: 10px 20px;
+    /* it applies color to text */
+    color: black;
+}
+
+.main-menu{
+    /* It makes list elements side by side after applying flex */
+    display: flex;
+
+}
+
+/* it applies padding, position etc.. both main-menu and sub-menu-item */
+.menu-item,
+.sub-menu-item{
+    /* When using CSS positioning, "position: relative" acts as a parent element*/
+    position: relative;
+    /* top and bottom -> 10px, left and right -> 20px 
+   Padding adds space inside the element, between content and border. */
+    padding: 10px 20px;
+    /* it shows hand symbol when we hover on menu-item */
+    cursor: pointer;
+    
+}
+
+/* Suppose, if we given text we get underline for text by default as it is an anchor tag
+so, to remove underline for text we use 'text-decoration: none'. But,we have used logo/image
+it is not required generally.  */
+
+.menu-item a{
+    text-decoration: none;
+    width: 1.3rem;
+}
+
+.menu-item:hover,
+.sub-menu-item:hover{
+    background-color: none;
+    
+}
+
+.sub-menu-item a{
+    color: black;
+    width: 1.3rem;
+}
+
+.sub-menu-item:hover{
+   background-color: rgba(1, 159, 211, 0.999);
+}
+
+
+/* We need dropdown to display when we hover on menu-item initially it shouldn't display */
+.dropdown {
+    display: none;
+    min-width: 200px;
+    background-color: none;
+    
+    /* We need to adjust position of dropdown according/relative to its menu-item. 
+    we need to give 'position:absolute' it acts as a child element */
+    position: absolute;
+    top: 40px;
+    left: 0;
+    /* when we used to display something on top to display z-index value should be 
+    greater than remaining elements */
+    z-index: 1;
+}
+
+/* whenever we hover on menu-item then only it displays dropdown menu */
+.menu-item:hover .dropdown{
+    display: block;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .main-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-item {
+        width: 100%;
+    }
+    .dropdown {
+        position: relative;
+        width: 100%;
+        top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+    .main-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-item {
+        width: 100%;
+        text-align: left;
+    }
+    .dropdown {
+        position: relative;
+        width: 100%;
+        top: auto;
+        display: none;
+    }
+    .menu-item:hover .dropdown {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-item {
+        width: 100%;
+        text-align: center;
+    }
+    .dropdown {
+        width: 100%;
+        position: relative;
+    }
+}
+
